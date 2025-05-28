@@ -2,59 +2,67 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ucapan Wisuda</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet"/>
 </head>
 <body>
-  <audio id="bg-music" src="assets/musik.mp3"></audio>
 
-  <div class="container">
-    <!-- 8 Pages -->
-    <div class="page" id="page1">
-      <button onclick="startMusic()">Mulai</button>
-      <h1>Selamat Wisuda!</h1>
-      <p>Hari ini adalah awal dari perjalanan baru.</p>
-    </div>
+<audio id="bg-music" src="assets/musik.mp3"></audio>
 
-    <div class="page" id="page2">
-      <h1>Perjalananmu</h1>
-      <p>Setiap langkah telah membawamu ke titik ini.</p>
-    </div>
-
-    <div class="page" id="page3">
-      <h1>Kerja Kerasmu</h1>
-      <p>Kami bangga atas dedikasi dan perjuanganmu.</p>
-    </div>
-
-    <div class="page" id="page4">
-      <h1>Semangat</h1>
-      <p>Jangan pernah lelah mengejar mimpi.</p>
-    </div>
-
-    <div class="page" id="page5">
-      <h1>Teman-temanmu</h1>
-      <p>Kami selalu mendukungmu, selamanya.</p>
-    </div>
-
-    <div class="page" id="page6">
-      <h1>Masa Depan</h1>
-      <p>Langit adalah batasnya. Teruslah terbang tinggi.</p>
-    </div>
-
-    <div class="page" id="page7">
-      <h1>Untukmu</h1>
-      <img src="assets/foto-teman.jpg" alt="Foto Teman Wisuda" />
-      <p>Ini adalah momenmu, nikmatilah.</p>
-    </div>
-
-    <div class="page" id="page8">
-      <h1>Selamat!</h1>
-      <p>Wisuda ini bukan akhir, tapi awal dari segalanya.</p>
-    </div>
+<div id="pages-container">
+  <!-- 8 pages -->
+  <div class="page" id="page1">
+    <button class="next-btn" onclick="nextPage()">Mulai</button>
+    <h1>Selamat Wisuda!</h1>
+    <p>Hari ini adalah awal dari perjalanan baru.</p>
   </div>
 
-  <script src="script.js"></script>
+  <div class="page" id="page2">
+    <h1>Perjalananmu</h1>
+    <p>Setiap langkah telah membawamu ke titik ini.</p>
+    <button class="next-btn" onclick="nextPage()">Selanjutnya</button>
+  </div>
+
+  <div class="page" id="page3">
+    <h1>Kerja Kerasmu</h1>
+    <p>Kami bangga atas dedikasi dan perjuanganmu.</p>
+    <button class="next-btn" onclick="nextPage()">Selanjutnya</button>
+  </div>
+
+  <div class="page" id="page4">
+    <h1>Semangat</h1>
+    <p>Jangan pernah lelah mengejar mimpi.</p>
+    <button class="next-btn" onclick="nextPage()">Selanjutnya</button>
+  </div>
+
+  <div class="page" id="page5">
+    <h1>Teman-temanmu</h1>
+    <p>Kami selalu mendukungmu, selamanya.</p>
+    <button class="next-btn" onclick="nextPage()">Selanjutnya</button>
+  </div>
+
+  <div class="page" id="page6">
+    <h1>Masa Depan</h1>
+    <p>Langit adalah batasnya. Teruslah terbang tinggi.</p>
+    <button class="next-btn" onclick="nextPage()">Selanjutnya</button>
+  </div>
+
+  <div class="page" id="page7">
+    <h1>Untukmu</h1>
+    <img src="assets/foto-teman.jpg" alt="Foto Teman Wisuda" />
+    <p>Ini adalah momenmu, nikmatilah.</p>
+    <button class="next-btn" onclick="nextPage()">Selanjutnya</button>
+  </div>
+
+  <div class="page" id="page8">
+    <h1>Selamat!</h1>
+    <p>Wisuda ini bukan akhir, tapi awal dari segalanya.</p>
+    <button class="next-btn" onclick="restart()">Ulangi</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
