@@ -37,3 +37,23 @@ function restart() {
 document.addEventListener('DOMContentLoaded', () => {
   showPage(currentPage);
 });
+function createFlower() {
+  const container = document.querySelector('.flowers-container');
+  const flower = document.createElement('div');
+  flower.classList.add('flower');
+
+  // Random position & delay
+  flower.style.left = `${Math.random() * 100}%`;
+  flower.style.animationDuration = `${4 + Math.random() * 3}s`;
+  flower.style.animationDelay = `${Math.random() * 2}s`;
+
+  container.appendChild(flower);
+
+  // Remove after animation
+  setTimeout(() => {
+    flower.remove();
+  }, 8000);
+}
+
+// Generate flowers continuously
+setInterval(createFlower, 500);
